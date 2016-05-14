@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "HN Tweaks",
+    "description": "Tweaks the appearance of the Hacker News to make it less obvious you are bored",
+    "version": "0.1",
+
+    "icons": { "128": "icons/hn_tweaks_128.png" },
+
+    "permissions": [ "https://news.ycombinator.com/*", "http://news.ycombinator.com/*" ],
+
+    "content_scripts": [ {
+        "css": [ "css/hn_tweaks.css" ],
+        "matches": [ "https://news.ycombinator.com/*", "http://news.ycombinator.com/*" ],
+        "run_at": "document_end"
+    }
+                       ],
+    "update_url": "https://clients2.google.com/service/update2/crx"
+}
